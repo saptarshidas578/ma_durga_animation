@@ -1,0 +1,6 @@
+numpy>=1.26,<3
+scipy>=1.10
+opencv-python-headless>=4.8,<6
+scikit-image>=0.22,<1
+Pillow>=10,<14
+pygame>=2.5,<3

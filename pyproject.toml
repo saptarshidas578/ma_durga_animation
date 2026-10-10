@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "durga-equation-animation"
+version = "0.1.0"
+description = "A live Pygame animation that draws Durga line art from fitted parametric equations."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Artistic Software",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+  "numpy>=1.26,<3",
+  "scipy>=1.10",
+  "opencv-python-headless>=4.8,<6",
+  "scikit-image>=0.22,<1",
+  "Pillow>=10,<14",
+  "pygame>=2.5,<3",
+]
+
+[project.optional-dependencies]
+dev = ["black>=24.8"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
